@@ -45,4 +45,4 @@ if score == 1:
 else:
     print("You got " + str(score) + " questions correctly")     
 
-#print("You got " + str(score / )) 
+print("You got " + str((score / 4) * 100) + "%")
