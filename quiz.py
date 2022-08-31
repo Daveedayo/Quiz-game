@@ -20,6 +20,7 @@ question2 = input("What does RAM stand for? ").lower()
 
 if question2 == "random access memory":
     print("Correct!")
+    score += 1
 else:
     print("Incorrect!")
 
@@ -27,6 +28,7 @@ question3 = input("What does ROM stand for? ").lower()
 
 if question3 == "read only memory":
     print("Correct!")
+    score += 1
 else:
     print("Incorrect!")
 
@@ -34,10 +36,13 @@ question4 = input("What does GPU stand for? ").lower()
 
 if question4 == "graphics processing unit":
     print("Correct!")
+    score += 1
 else:
     print("Incorrect!")
 
 if score == 1:
     print("You got " + str(score) + " question correctly")
 else:
-    print("You got " + str(score) + " questions correctly")        
+    print("You got " + str(score) + " questions correctly")     
+
+#print("You got " + str(score / )) 
