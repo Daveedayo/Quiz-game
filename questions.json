@@ -1,0 +1,12 @@
+{
+    "questions":[
+        {"question":"What does CPU stand for?","ans": "central processing unit"},
+        {"question":"What does RAM stand for? ","ans": "random access memory"},
+        {"question":"What does ROM stand for? ","ans": "read only memory"},
+        {"question":"What does GPU stand for? ","ans": "graphics processing unit"}
+    ]
+  
+}
+
+
+
