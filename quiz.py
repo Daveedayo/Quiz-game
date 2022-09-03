@@ -1,3 +1,9 @@
+import json
+
+questions_json = json.load(open("questions.json"))
+questions = questions_json["questions"]
+
+
 print("Welcome to my computer quiz")
 
 get_started = input("Do you wanna play my game? ").lower()
@@ -8,41 +14,14 @@ if get_started != "yes":
 print("Okay let's play it!")
 score = 0
 
-question1 = input("What does CPU stand for? ").lower()
+for q in questions:
+    question = input(q["question"]).lower()
+    if question == q["ans"].lower():
+        score +=1
+        print('Correct')
+    else:
+        print("Incorect")
 
-if question1 == "central processing unit":
-    print("Correct!")
-    score += 1
-else:
-    print("Incorrect!")
+print(f"You have scored {score} marks out of {len(questions)} questions")
 
-question2 = input("What does RAM stand for? ").lower()
-
-if question2 == "random access memory":
-    print("Correct!")
-    score += 1
-else:
-    print("Incorrect!")
-
-question3 = input("What does ROM stand for? ").lower()
-
-if question3 == "read only memory":
-    print("Correct!")
-    score += 1
-else:
-    print("Incorrect!")
-
-question4 = input("What does GPU stand for? ").lower()
-
-if question4 == "graphics processing unit":
-    print("Correct!")
-    score += 1
-else:
-    print("Incorrect!")
-
-if score == 1:
-    print("You got " + str(score) + " question correctly")
-else:
-    print("You got " + str(score) + " questions correctly")     
-
-print("You got " + str((score / 4) * 100) + "%")
+print(f"You got {(score/len(questions)) * 100}% ")
